@@ -58,10 +58,8 @@ def get_subs_index(new_rs, check_non_term):
 
 
 def run_conversion():
-  # print('CFG: ')
-  # display(dic)
+
   first_step()
   second_step()
-  # print('CNF: ')
-  # display(dic)
+
   return dic
