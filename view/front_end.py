@@ -5,10 +5,20 @@ from streamlit_lottie import st_lottie
 import controller.cyk_algorithm.execution as cyk
 
 def start_fe():
+  title = 'Parsing Sintaksis Kalimat Bahasa Indonesia Menggunakan Algoritma CYK'
   lottie = load_lottie_url("https://assets7.lottiefiles.com/temp/lf20_zLc23z.json")
-  st.set_page_config(page_title='CYK Algorithm', page_icon='::tada::', layout='wide')
+  st.set_page_config(page_title='CYK Algorithm', page_icon='::tada::', layout='wide', menu_items={
+    'About': f"""
+      ### {title}
+      Made with :heart: oleh kelompok 3 kelas E 
+      Teori Bahasa dan Otomata
+      GitHub: https://github.com/gedeapriana/indonesian-sentence-cyk
+      """
+  })
   st_lottie(lottie, height=300, key='coding')
-  st.write("<h1 style='text-align: center;'>Aplikasi Pengecekan Kalimat Bahasa Indonesia</h1>", unsafe_allow_html=True)
+  st.write("<h2 style='text-align: center;'>Aplikasi Pengecekan Kalimat Bahasa Indonesia</h2>", unsafe_allow_html=True)
+  st.write("<h5 style='text-align: center;'> GitHub: <a href='https://github.com/gedeapriana/indonesian-sentence-cyk'>gedeapriana/indonesian-sentence-cyk</a></h2>", unsafe_allow_html=True)
+  st.write('')
 
   final_dic = grammar.get_grammar()
   with st.container():
