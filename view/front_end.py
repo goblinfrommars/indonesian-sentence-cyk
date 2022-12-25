@@ -32,7 +32,7 @@ def start_fe():
         if len(string_input) == 0:
           st.write('Form tidak boleh kosong!')
         else:
-          cyk.cyk_parse(final_dic, string_input)
+          cyk.cyk_parse(final_dic, string_input.lower())
 
 
     with rule_column:
