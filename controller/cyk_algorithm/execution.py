@@ -59,9 +59,12 @@ def filling_all(cnf, string, table_filling, n):
 def is_accepted(table_filling, cnf, flag, n):
   if list(cnf.keys())[0] in table_filling[0][n-1] and flag == 1:
     is_acc = st.success('Kalimat diterima dalam tata Bahasa Indonesia')
+    print('Kalimat diterima dalam tata Bahasa Indonesia')
     st.balloons()
   elif flag == -1:
     is_acc = st.warning('Kata dalam kalimat tidak terdapat pada rule')
+    print('Kata dalam kalimat tidak terdapat pada rule')
   else:
     is_acc = st.error('Kalimat tidak valid')
+    print('Kalimat tidak valid')
   return is_acc

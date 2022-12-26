@@ -3,6 +3,7 @@ import streamlit as st
 import controller.cnf_conversion.after_conversion as grammar
 # from streamlit_lottie import st_lottie
 import controller.cyk_algorithm.execution as cyk
+import controller.cnf_conversion.cfg as cfg
 
 def start_fe():
   title = 'Parsing Sintaksis Kalimat Bahasa Indonesia Menggunakan Algoritma CYK'
@@ -21,6 +22,7 @@ def start_fe():
   st.write('')
 
   final_dic = grammar.get_grammar()
+
   with st.container():
     st.write('---')
     input_column, rule_column = st.columns(2)
@@ -32,7 +34,7 @@ def start_fe():
         if len(string_input) == 0:
           st.write('Form tidak boleh kosong!')
         else:
-          cyk.cyk_parse(final_dic, string_input.lower())
+          cyk.cyk_parse(final_dic, string_input)
 
 
     with rule_column:

@@ -1,6 +1,6 @@
 from controller.cnf_conversion.cfg import *
 
-var_ls = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
+var_ls = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']
 new_rs = [] # menampung terminal baru setelah hasil konversi
 new_ls = [] # menampung non terminal baru setelah hasil konversi
 

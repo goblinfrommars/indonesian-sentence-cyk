@@ -14,8 +14,9 @@ def display(get_dic):
 def insert_grammar():
     global dic
 
-    text = open('controller/cnf_conversion/cfg.txt', 'r')
+    text = open('controller/cnf_conversion/cfg-all.txt', 'r')
     cfg = text.read().splitlines()
+
 
     for i in range(len(cfg)):
         lhs = cfg[i].split(' -> ')[0]
