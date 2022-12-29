@@ -22,6 +22,7 @@ def start_fe():
   st.write('')
 
   final_dic = grammar.get_grammar()
+  cfg.display(final_dic)
 
   with st.container():
     st.write('---')

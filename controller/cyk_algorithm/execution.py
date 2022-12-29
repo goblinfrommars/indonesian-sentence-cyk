@@ -9,20 +9,13 @@ def cyk_parse(cnf, string):
   n = len(string.split())
   table_filling = [[set([]) for j in range(n)] for i in range(n + 1)]
 
-  # FIRST STEP
   get_all_rhs(cnf, n)
   flag = string_exist(string, n)
 
-  # SECOND STEP
-  is_acc = ''
-  print(is_acc)
-
-  # THIRD STEP
   filling_bottom(cnf, string, table_filling, n)
   filling_all(cnf, string, table_filling, n)
   is_accepted(table_filling, cnf, flag, n)
 
-# ------------- SUB FUNCTIONS -----------------
 
 def get_all_rhs(cnf, n):
   for i in range(0, n):
